@@ -282,7 +282,7 @@
         <item>@string/app_ops_labels_modify_call_log</item>
         <item>@string/app_ops_labels_read_calendar</item>
         <item>@string/app_ops_labels_modify_calendar</item>
-        <item>@string/app_ops_labels_location</item>
+        <item>@string/app_ops_summaries_wifi_scan</item>
         <item>@string/app_ops_labels_notification_toast</item>
         <item>@string/app_ops_labels_location</item>
         <item>@string/app_ops_labels_call_phone</item>
