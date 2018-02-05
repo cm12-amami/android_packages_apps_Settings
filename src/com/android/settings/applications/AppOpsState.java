@@ -126,7 +126,9 @@ public class AppOpsState {
                     AppOpsManager.OP_READ_CALENDAR,
                     AppOpsManager.OP_WRITE_CALENDAR,
                     AppOpsManager.OP_DELETE_CONTACTS,
-                    AppOpsManager.OP_DELETE_CALL_LOG },
+                    AppOpsManager.OP_DELETE_CALL_LOG,
+                    AppOpsManager.OP_READ_CLIPBOARD,
+                    AppOpsManager.OP_WRITE_CLIPBOARD },
             new boolean[] { true,
                     true,
                     true,
@@ -134,7 +136,9 @@ public class AppOpsState {
                     true,
                     true,
                     true,
-                    true }
+                    true,
+                    false,
+                    false }
             );
 
     public static final OpsTemplate MESSAGING_TEMPLATE = new OpsTemplate(
@@ -162,13 +166,16 @@ public class AppOpsState {
 
     public static final OpsTemplate MEDIA_TEMPLATE = new OpsTemplate(
             new int[] { AppOpsManager.OP_CAMERA,
-                    AppOpsManager.OP_RECORD_AUDIO },
+                    AppOpsManager.OP_RECORD_AUDIO,
+                    AppOpsManager.OP_VIBRATE },
             new boolean[] { true,
-                    true }
+                    true,
+                    false }
             );
 
     public static final OpsTemplate DEVICE_TEMPLATE = new OpsTemplate(
             new int[] { AppOpsManager.OP_CALL_PHONE,
+                    AppOpsManager.OP_ACCESS_NOTIFICATIONS,
                     AppOpsManager.OP_WIFI_CHANGE,
                     AppOpsManager.OP_BLUETOOTH_CHANGE,
                     AppOpsManager.OP_NFC_CHANGE,
@@ -176,6 +183,7 @@ public class AppOpsState {
                     AppOpsManager.OP_WAKE_LOCK,
                     AppOpsManager.OP_ALARM_WAKEUP },
             new boolean[] { true,
+                    true,
                     true,
                     true,
                     true,
