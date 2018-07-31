@@ -65,6 +65,7 @@ import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.Profile;
 import android.provider.ContactsContract.RawContacts;
+import android.provider.Settings;
 import android.service.persistentdata.PersistentDataBlockManager;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
@@ -1403,5 +1404,10 @@ public final class Utils {
         callSmsNotAllowed &= userManager.hasUserRestriction(
                 UserManager.DISALLOW_SMS, userHandle);
         return !callSmsNotAllowed;
+    }
+
+    public static boolean isDeviceProvisioned(Context context) {
+        return Settings.Global.getInt(context.getContentResolver(),
+                Settings.Global.DEVICE_PROVISIONED, 0) != 0;
     }
 }

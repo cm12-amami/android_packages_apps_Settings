@@ -119,6 +119,12 @@ public class ChooseLockGeneric extends SettingsActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
+            final Activity activity = getActivity();
+            if (!Utils.isDeviceProvisioned(activity) && !canRunBeforeDeviceProvisioned()) {
+                activity.finish();
+                return;
+            }
+
             mDPM = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
             mKeyStore = KeyStore.getInstance();
             mChooseLockSettingsHelper = new ChooseLockSettingsHelper(this.getActivity());
@@ -390,6 +396,10 @@ public class ChooseLockGeneric extends SettingsActivity {
                     }
                 }
             }
+        }
+
+        protected boolean canRunBeforeDeviceProvisioned() {
+            return false;
         }
 
         private void updatePreferenceSummaryIfNeeded() {

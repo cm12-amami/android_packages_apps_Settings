@@ -605,8 +605,8 @@ public class SettingsActivity extends Activity
             } else {
                 // No UP affordance if we are displaying the main Dashboard
                 mDisplayHomeAsUpEnabled = false;
-                // Show Search affordance
-                mDisplaySearch = true;
+                // Show Search affordance (only if device provisioned)
+                mDisplaySearch = Utils.isDeviceProvisioned(this);
                 mInitialTitleResId = R.string.dashboard_title;
                 switchToFragment(DashboardSummary.class.getName(), null, false, false,
                         mInitialTitleResId, mInitialTitle, false);
