@@ -17,6 +17,7 @@
 package com.android.settings;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -123,7 +124,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             try {
                 SimpleDateFormat template = new SimpleDateFormat("yyyy-MM-dd");
                 Date patchDate = template.parse(patch);
-                String format = DateFormat.getBestDateTimePattern(Locale.getDefault(), "dMMMMyyyy");
+                String format = DateFormat.getBestDateTimePattern(Locale.getDefault(), "MMMMyyyy");
                 patch = DateFormat.format(format, patchDate).toString();
             } catch (ParseException e) {
                 // broken parse; fall through and use the raw string
@@ -141,6 +142,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_MOD_VERSION, "ro.cm.display.version");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        findPreference(KEY_SECURITY_PATCH).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -336,6 +338,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             } catch (Exception e) {
                 Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
             }
+        } else if (preference.getKey().equals(KEY_SECURITY_PATCH)) {
+            new AlertDialog.Builder(getActivity())
+                .setTitle(R.string.security_patch)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage(R.string.security_patch_legacy_info)
+                .setNegativeButton(R.string.cancel, null)
+                .create().show();
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

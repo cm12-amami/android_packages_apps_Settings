@@ -1427,4 +1427,8 @@
 
     <string name="hardware_version_title">Hardware version</string>
     <string name="hardware_version_value" translatable="false"></string>
+
+    <!-- "Legacy" Security Patch label -->
+    <string name="security_patch_legacy">Unofficial security backport</string>
+    <string name="security_patch_legacy_info">There are no official security patches for this Android version anymore. \nAll patches contained in this build are backports from newer versions.</string>
 </resources>
