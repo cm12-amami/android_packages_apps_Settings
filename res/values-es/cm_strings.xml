@@ -1214,4 +1214,7 @@
                  <b>Contribuciones totales:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
                  <b>Última actualización:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="quick_settings_reset_message">¿Restaurar los controles de ajustes rápidos?</string>
+
+  <string name="security_patch_legacy">Copia de seguridad no oficial</string>
+  <string name="security_patch_legacy_info">No hay actualizaciones de seguridad oficiales disponibles para esta versión de Android. \nTodos los parches contenidos fueron portados desde versiones más nuevas.</string>
 </resources>

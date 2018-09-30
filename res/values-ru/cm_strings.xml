@@ -1216,4 +1216,6 @@
 <b>Последнее обновление:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="quick_settings_reset_message">Сбросить настройки плиток?</string>
   <string name="hardware_version_title">Версия оборудования</string>
+  <string name="security_patch_legacy">Неофициальные исправления безопасности</string>
+  <string name="security_patch_legacy_info">Официальные исправления безопасности более не выпускаются для данной версии Android. \nВсе исправления, представленные в этой сборке, адаптированы из более новых версий системы.</string>
 </resources>

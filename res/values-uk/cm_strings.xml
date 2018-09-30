@@ -1213,4 +1213,6 @@
                  <b>Всього коммітів:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
                  <b>Останнє оновлення:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="quick_settings_reset_message">Скинути налаштування плиток?</string>
+  <string name="security_patch_legacy">Неофіційні виправлення безпеки</string>
+  <string name="security_patch_legacy_info">Офіційні виправлення безпеки більше не випускаються для даної версії Android. \nУсі виправлення, наявні у цій збірці, адаптовані з новіших версій системи.</string>
 </resources>

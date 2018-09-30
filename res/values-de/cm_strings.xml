@@ -1221,4 +1221,7 @@
 
   <string name="quick_settings_reset_message">Kacheln der Schnelleinstellungen zurücksetzen?</string>
   <string name="hardware_version_title">Hardware-Version</string>
+
+  <string name="security_patch_legacy">Inoffizielle Sicherheitsstufe</string>
+  <string name="security_patch_legacy_info">Für diese Android-Version sind keine offiziellen Sicherheitsupdates mehr erhältlich. \nAlle enthaltenen Patches wurden aus neueren Versionen rückportiert.</string>
 </resources>

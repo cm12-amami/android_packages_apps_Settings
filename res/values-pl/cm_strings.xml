@@ -1218,4 +1218,6 @@
                  <b>Ostatnia aktualizacja:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="quick_settings_reset_message">Zresetować przełączniki ustawień?</string>
   <string name="hardware_version_title">Wersja sprzętu</string>
+  <string name="security_patch_legacy">Nieoficjalna aktualizacja zabezpieczeń</string>
+  <string name="security_patch_legacy_info">Nie ma oficjalnych aktualizacji zabezpieczeń dla tej wersji Androida. \nWszystkie zawarte łaty zostały przeniesione z nowszych wersji.</string>
 </resources>
