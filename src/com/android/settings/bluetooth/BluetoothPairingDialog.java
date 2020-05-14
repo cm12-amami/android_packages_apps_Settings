@@ -47,6 +47,8 @@ import android.view.KeyEvent;
 
 import java.util.Locale;
 
+import static android.view.WindowManager.LayoutParams.PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 /**
  * BluetoothPairingDialog asks the user to enter a PIN / Passkey / simple confirmation
  * for pairing with a remote Bluetooth device. It is an activity that appears as a dialog.
@@ -97,6 +99,8 @@ public final class BluetoothPairingDialog extends AlertActivity implements
         super.onCreate(savedInstanceState);
 
         mIsButtonPressed = false;
+
+        getWindow().addPrivateFlags(PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
         Intent intent = getIntent();
         if (!intent.getAction().equals(BluetoothDevice.ACTION_PAIRING_REQUEST))
