@@ -30,6 +30,8 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 
+import static android.view.WindowManager.LayoutParams.PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 /**
  * RequestPermissionActivity asks the user whether to enable discovery. This is
  * usually started by an application wanted to start bluetooth and or discovery
@@ -93,6 +95,8 @@ public class RequestPermissionActivity extends Activity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addPrivateFlags(PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
         // Note: initializes mLocalAdapter and returns true on error
         if (parseIntent()) {
